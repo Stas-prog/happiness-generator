@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "Glücks-Generator",
+    "subtitle": "Wenn die Optionen gleich sind – vertraue dem Los: gehen oder warten, beitreten oder den Plan ändern.",
+    "tagline": "Das Rad der Zeit dreht sich – wähle mit Herz und Gewissen.",
+    "toBeNotToBe": "Sein oder Nichtsein – das ist hier die Frage."
+  },
+  "nav": {
+    "home": "Startseite",
+    "oracle": "Orakel",
+    "changeLanguage": "Sprache ändern",
+    "locales": {
+      "uk": "Ukrainisch",
+      "en": "Englisch",
+      "de": "Deutsch"
+    }
+  },
+  "oracle": {
+    "title": "Orakel der Wahl",
+    "hintTitle": "Hinweis",
+    "hint": "Gib dem Allmächtigen Raum, deine Schritte zu lenken. Spende, Gebet, gute Absichten – und die Antwort wird kommen.",
+    "start": "Start",
+    "reset": "Zurücksetzen",
+    "share": "Teilen",
+    "shareCopy": "Link kopieren",
+    "shareCopied": "Kopiert!",
+    "answer": {
+      "yes": "Geh!",
+      "no": "Geh nicht",
+      "wait": "Warte"
+    }
+  },
+  "donate": {
+    "text": "Gutes kehrt vielfach zurück. Spenden gehen an Kinder und obdachlose Tiere.",
+    "cta": "Unterstützen"
+  },
+  "footer": {
+    "thanks": "Danke, dass du bei uns bist. Tue Gutes und sei glücklich.",
+    "blessing": "Segen für dich und deine Familie 🌼❤️",
+    "madeWithLove": "Mit Liebe und Licht gemacht"
+  }
+}

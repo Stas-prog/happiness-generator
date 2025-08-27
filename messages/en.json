@@ -1,0 +1,42 @@
+{
+  "app": {
+    "title": "Happiness Generator",
+    "subtitle": "When options are equal — trust the lot: to go or to wait, to join or to change the plan.",
+    "tagline": "The wheel of time turns—choose with heart and conscience.",
+    "toBeNotToBe": "To be, or not to be—that is the question."
+  },
+  "nav": {
+    "home": "Home",
+    "oracle": "Oracle",
+    "changeLanguage": "Change language",
+    "locales": {
+      "uk": "Ukrainian",
+      "en": "English",
+      "de": "German"
+    }
+  },
+  "oracle": {
+    "title": "Oracle of choice",
+    "hintTitle": "Hint",
+    "hint": "Give the Almighty room to guide your steps. Donation, prayer, good intentions — and the answer will come.",
+    "start": "Start",
+    "reset": "Reset",
+    "share": "Share",
+    "shareCopy": "Copy link",
+    "shareCopied": "Copied!",
+    "answer": {
+      "yes": "Go!",
+      "no": "Don't go",
+      "wait": "Wait"
+    }
+  },
+  "donate": {
+    "text": "Good returns manifold. Donations go to children and homeless animals.",
+    "cta": "Support"
+  },
+  "footer": {
+    "thanks": "Thank you for being with us. Do good and be happy.",
+    "blessing": "Blessings to you and your family 🌼❤️",
+    "madeWithLove": "Made with love and light"
+  }
+}

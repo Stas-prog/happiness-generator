@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* повільне обертання зовнішнього кільця годинника */
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+/* дрібні покращення типографіки */
+html, body { scroll-behavior: smooth; }
+
+
