@@ -2,78 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* повільне обертання зовнішнього кільця годинника */
-@keyframes spin-slow {
-  to { transform: rotate(360deg); }
-}
-.animate-spin-slow {
-  animation: spin-slow 6s linear infinite;
-}
-
-/* дрібні покращення типографіки */
-html, body { scroll-behavior: smooth; }
-
-/* ===== Анімація “дихання” для Оракула ===== */
-@keyframes breathe {
-  0%, 100% { transform: scale(1); opacity: .85; filter: brightness(.95); }
-  50% { transform: scale(1.08); opacity: 1; filter: brightness(1.1); }
-}
-.breathe { animation: breathe 3s ease-in-out infinite; }
-
-/* ===== ЛОГО-СПІНЕР (3D) — поруч з заголовком ===== */
+/* ====== ЛОГО-СПІНЕР біля заголовка ====== */
 .logo-spinner {
-  width: 48px;
-  height: 48px;
-  color: #fff;
+  width: 28px;
+  height: 28px;
   position: relative;
+  border-radius: 50%;
   transform: rotateZ(45deg);
   perspective: 1000px;
-  border-radius: 50%;
+  color: #fff;
 }
 .logo-spinner::before,
 .logo-spinner::after {
   content: "";
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   border-radius: 50%;
   transform: rotateX(70deg);
-  animation: logo-spin 1s linear infinite;
+  animation: logoSpin 1s linear infinite;
 }
 .logo-spinner::after {
   color: #FF3D00;
   transform: rotateY(70deg);
   animation-delay: .4s;
 }
-@keyframes logo-spin {
+@keyframes logoSpin {
   0%,100% { box-shadow: .2em 0 0 0 currentColor; }
-  12%     { box-shadow: .2em .2em 0 0 currentColor; }
-  25%     { box-shadow: 0 .2em 0 0 currentColor; }
-  37%     { box-shadow: -.2em .2em 0 0 currentColor; }
-  50%     { box-shadow: -.2em 0 0 0 currentColor; }
-  62%     { box-shadow: -.2em -.2em 0 0 currentColor; }
-  75%     { box-shadow: 0 -.2em 0 0 currentColor; }
-  87%     { box-shadow: .2em -.2em 0 0 currentColor; }
+  12%    { box-shadow: .2em .2em 0 0 currentColor; }
+  25%    { box-shadow: 0 .2em 0 0 currentColor; }
+  37%    { box-shadow: -.2em .2em 0 0 currentColor; }
+  50%    { box-shadow: -.2em 0 0 0 currentColor; }
+  62%    { box-shadow: -.2em -.2em 0 0 currentColor; }
+  75%    { box-shadow: 0 -.2em 0 0 currentColor; }
+  87%    { box-shadow: .2em -.2em 0 0 currentColor; }
 }
 
-/* ===== ВНУТРІШНЄ “КОЛЕСО” (у колі Оракула, під годинником) ===== */
-.wheel-loader {
-  width: 100%;
+/* ====== ВНУТРІШНЄ КОЛЕСО (в середині кілець годинника) ====== */
+.inner-wheel {
+  width: 72px;
   aspect-ratio: 1;
-  color: #d97706; /* amber-600 */
+  color: #eab308; /* amber-500 */
   border-radius: 50%;
   display: grid;
   background:
-    conic-gradient(from 90deg at 6px 6px, transparent 90deg, currentColor 0)
-    -6px -6px / calc(50% + 3px) calc(50% + 3px),
-    radial-gradient(farthest-side, currentColor 7px, transparent 8px calc(100% - 7px), currentColor calc(100% - 6px)) no-repeat;
-  animation: wheel-rot 1.8s linear infinite;
+    conic-gradient(from 90deg at 4px 4px, #0000 90deg, currentColor 0) -4px -4px/
+    calc(50% + 2px) calc(50% + 2px),
+    radial-gradient(farthest-side, currentColor 6px, #0000 7px calc(100% - 6px), currentColor calc(100% - 5px)) no-repeat;
+  animation: wheelTurn 2s infinite linear;
   position: relative;
 }
-.wheel-loader::before {
+.inner-wheel::before {
   content: "";
   border-radius: inherit;
   background: inherit;
   transform: rotate(45deg);
-  position: absolute; inset: 0;
 }
-@keyframes wheel-rot { to { transform: rotate(.5turn) } }
+@keyframes wheelTurn { to { transform: rotate(.5turn) } }
 
+/* ====== ДИХАННЯ ОРАКУЛА ====== */
+.oracle-breath {
+  width: 128px;
+  height: 128px;
+  border-radius: 9999px;
+  background: radial-gradient(closest-side, rgba(255,200,100,0.35), rgba(255,160,40,0.12), rgba(255,140,0,0.05));
+  box-shadow: 0 0 40px rgba(255,200,120,0.18) inset, 0 0 24px rgba(255,160,60,0.12);
+  display: grid;
+  place-items: center;
+  transition: filter .3s ease, box-shadow .3s ease;
+}
+.oracle-breath.breathing {
+  animation: oracleBreath 1.6s ease-in-out infinite;
+  filter: brightness(1.2);
+}
+.oracle-breath.lit {
+  filter: brightness(1.35);
+  box-shadow: 0 0 42px rgba(255,215,130,0.25) inset, 0 0 30px rgba(255,170,70,0.18);
+}
+.oracle-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 30% 30%, #fff, #ffd27a 60%, #f59e0b);
+  box-shadow: 0 0 18px rgba(255, 200, 110, .45);
+}
+@keyframes oracleBreath {
+  0%, 100% { transform: scale(0.96); filter: brightness(1.05); }
+  50%      { transform: scale(1.05);  filter: brightness(1.35); }
+}

@@ -1,99 +1,126 @@
-'use client';
+// components/Oracle.tsx
+"use client";
 
-import { useMemo, useRef, useState } from 'react';
+import { useState } from "react";
 
-const ANSWERS = ['Йди!', 'Не йди', 'Зачекай'] as const;
+type OracleStrings = {
+  title: string;
+  hintTitle: string;
+  start: string;
+  reset: string;
+  share: string;
+  shareCopy: string;
+  shareCopied: string;
+  donate: string;
+  hint: string;
+  answer: { yes: string; no: string; wait: string };
+};
 
-export default function Oracle() {
-  const [spinning, setSpinning] = useState(false);
-  const [answer, setAnswer] = useState<string | null>(null);
+export default function Oracle({
+  locale,
+  strings
+}: {
+  locale: string;
+  strings: OracleStrings;
+}) {
+  const [state, setState] = useState<"idle" | "thinking" | "done">("idle");
+  const [result, setResult] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-
-  const ringClass = useMemo(
-    () =>
-      spinning
-        ? 'animate-[spin_1.1s_linear_infinite]'
-        : 'animate-none',
-    [spinning]
-  );
 
   function start() {
-    if (spinning) return;
-    setAnswer(null);
-    setSpinning(true);
+    setState("thinking");
+    setResult(null);
+    setCopied(false);
 
-    // короткий «вискок» відповіді
-    timerRef.current = setTimeout(() => {
-      const pick = ANSWERS[Math.floor(Math.random() * ANSWERS.length)];
-      setAnswer(pick);
-      setSpinning(false);
-    }, 900);
+    // невеличка пауза, щоб "подих" був відчутний
+    setTimeout(() => {
+      const r = Math.random();
+      const pick =
+        r < 0.4 ? strings.answer.yes : r < 0.7 ? strings.answer.wait : strings.answer.no;
+      setResult(pick);
+      setState("done");
+    }, 1600);
   }
 
   function reset() {
-    setAnswer(null);
-    setSpinning(false);
-    if (timerRef.current) clearTimeout(timerRef.current);
+    setState("idle");
+    setResult(null);
+    setCopied(false);
   }
 
-  async function copyShare() {
-    const text = `Оракул підказав: ${answer ?? '—'}`;
+  async function copyLink() {
+    const url = typeof window !== "undefined" ? window.location.href : "";
     try {
-      await navigator.clipboard.writeText(text);
+      await navigator.clipboard.writeText(url);
       setCopied(true);
-      setTimeout(() => setCopied(false), 1200);
+      setTimeout(() => setCopied(false), 1500);
     } catch {
-      // no-op
+      setCopied(false);
     }
   }
 
   return (
-    <div className="flex flex-col items-center gap-4 sm:gap-5">
-      <div className="text-sm uppercase tracking-widest text-slate-400">Оракул вибору</div>
+    <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
+      <div className="flex items-center justify-between mb-4">
+        <h2 className="text-lg font-semibold">{strings.title}</h2>
+        {/* Кнопка донату поруч з підказкою — лінк відредагуєш на свій */}
+        <a
+          href="https://donate.stripe.com/test_123" target="_blank" rel="noreferrer"
+          className="text-amber-300 hover:text-amber-200 text-sm"
+        >
+          {strings.donate}
+        </a>
+      </div>
 
-      {/* гіпно-коло */}
-      <div className="relative h-40 w-40 sm:h-48 sm:w-48 md:h-56 md:w-56">
-        <div className={`absolute inset-0 rounded-full border-4 border-amber-400/70 ${ringClass}`} />
-        <div className={`absolute inset-4 rounded-full border-4 border-amber-300/70 ${ringClass}`} />
-        <div className="absolute inset-8 rounded-full bg-gradient-to-br from-amber-300/50 to-amber-600/40" />
-        {/* відповідь на мить */}
-        {answer && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-xl sm:text-2xl md:text-3xl font-bold drop-shadow">
-              {answer}
-            </span>
-          </div>
+      {/* Дихаюче коло */}
+      <div className="grid place-items-center py-6">
+        <div
+          className={`oracle-breath ${state === "thinking" ? "breathing" : ""} ${
+            state === "done" ? "lit" : ""
+          }`}
+          aria-label="oracle-circle"
+        >
+          <span className="oracle-dot" />
+        </div>
+      </div>
+
+      {/* Відповідь */}
+      <div className="min-h-[2.25rem] text-center text-xl font-semibold">
+        {result ?? ""}
+      </div>
+
+      {/* Кнопки */}
+      <div className="mt-6 flex flex-wrap gap-2 justify-center">
+        {state !== "thinking" && (
+          <button
+            onClick={start}
+            className="px-4 py-2 rounded bg-emerald-400 text-black hover:brightness-95"
+          >
+            {strings.start}
+          </button>
         )}
-      </div>
-
-      {/* кнопки */}
-      <div className="grid w-full grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
+        {state !== "idle" && (
+          <button
+            onClick={reset}
+            className="px-4 py-2 rounded border border-slate-700 text-slate-200 hover:bg-slate-800"
+          >
+            {strings.reset}
+          </button>
+        )}
         <button
-          onClick={start}
-          disabled={spinning}
-          className="h-11 rounded-lg bg-emerald-400 text-black font-semibold hover:brightness-95 active:translate-y-px disabled:opacity-60"
+          onClick={copyLink}
+          className="px-4 py-2 rounded border border-slate-700 text-slate-200 hover:bg-slate-800"
+          title={strings.shareCopy}
         >
-          Старт
-        </button>
-        <button
-          onClick={reset}
-          className="h-11 rounded-lg border border-slate-700 text-slate-200 hover:bg-slate-800/60"
-        >
-          Скинути
-        </button>
-        <button
-          onClick={copyShare}
-          className="h-11 rounded-lg border border-amber-400/60 text-amber-300 hover:bg-amber-500/10"
-          title={copied ? 'Скопійовано!' : 'Скопіювати'}
-        >
-          {copied ? 'Скопійовано!' : 'Скопіювати'}
+          {copied ? strings.shareCopied : strings.share}
         </button>
       </div>
 
-      <p className="max-w-prose text-center text-slate-300 text-sm sm:text-base">
-        Дай Всевишньому простір спрямувати твої кроки. Донат, молитва, добрі наміри — і відповідь прийде.
-      </p>
+      {/* Підказка */}
+      <div className="mt-6 text-sm text-slate-300">
+        <div className="font-medium text-slate-200 mb-1">{strings.hintTitle}</div>
+        <p>{strings.hint}</p>
+      </div>
     </div>
   );
 }

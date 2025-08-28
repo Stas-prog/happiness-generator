@@ -1,42 +1,27 @@
 {
   "app": {
     "title": "Happiness Generator",
-    "subtitle": "When options are equal — trust the lot: to go or to wait, to join or to change the plan.",
-    "tagline": "The wheel of time turns—choose with heart and conscience.",
+    "subtitle": "When options are equal—trust the lot: go or wait, commit or change the plan.",
     "toBeNotToBe": "To be, or not to be—that is the question."
   },
-  "nav": {
-    "home": "Home",
-    "oracle": "Oracle",
-    "changeLanguage": "Change language",
-    "locales": {
-      "uk": "Ukrainian",
-      "en": "English",
-      "de": "German"
-    }
+  "nav": { "home": "Home", "oracle": "Oracle" },
+  "footer": { "madeWithLove": "Made with love & light" },
+  "clock": {
+    "line1": "Time flows",
+    "line2": "Life is short",
+    "line3": "Guard your time",
+    "line4": "Increase your odds of luck"
   },
   "oracle": {
-    "title": "Oracle of choice",
+    "title": "Choice Oracle",
     "hintTitle": "Hint",
-    "hint": "Give the Almighty room to guide your steps. Donation, prayer, good intentions — and the answer will come.",
     "start": "Start",
     "reset": "Reset",
     "share": "Share",
-    "shareCopy": "Copy link",
+    "shareCopy": "Copy",
     "shareCopied": "Copied!",
-    "answer": {
-      "yes": "Go!",
-      "no": "Don't go",
-      "wait": "Wait"
-    }
-  },
-  "donate": {
-    "text": "Good returns manifold. Donations go to children and homeless animals.",
-    "cta": "Support"
-  },
-  "footer": {
-    "thanks": "Thank you for being with us. Do good and be happy.",
-    "blessing": "Blessings to you and your family 🌼❤️",
-    "madeWithLove": "Made with love and light"
+    "donate": "Donate",
+    "hint": "Give the Most High room to guide your steps. Support, prayer, kind intent—and the answer will come.",
+    "answer": { "yes": "Go!", "no": "Don't go", "wait": "Wait" }
   }
 }

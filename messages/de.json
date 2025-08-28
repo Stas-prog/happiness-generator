@@ -1,42 +1,27 @@
 {
   "app": {
     "title": "Glücks-Generator",
-    "subtitle": "Wenn die Optionen gleich sind – vertraue dem Los: gehen oder warten, beitreten oder den Plan ändern.",
-    "tagline": "Das Rad der Zeit dreht sich – wähle mit Herz und Gewissen.",
-    "toBeNotToBe": "Sein oder Nichtsein – das ist hier die Frage."
+    "subtitle": "Sind die Optionen gleich—vertrau dem Los: gehen oder warten, beginnen oder Plan ändern.",
+    "toBeNotToBe": "Sein oder nicht sein—das ist hier die Frage."
   },
-  "nav": {
-    "home": "Startseite",
-    "oracle": "Orakel",
-    "changeLanguage": "Sprache ändern",
-    "locales": {
-      "uk": "Ukrainisch",
-      "en": "Englisch",
-      "de": "Deutsch"
-    }
+  "nav": { "home": "Start", "oracle": "Orakel" },
+  "footer": { "madeWithLove": "Mit Liebe und Licht gemacht" },
+  "clock": {
+    "line1": "Zeit fließt",
+    "line2": "Das Leben ist kurz",
+    "line3": "Schütze deine Zeit",
+    "line4": "Erhöhe deine Chancen auf Glück"
   },
   "oracle": {
     "title": "Orakel der Wahl",
     "hintTitle": "Hinweis",
-    "hint": "Gib dem Allmächtigen Raum, deine Schritte zu lenken. Spende, Gebet, gute Absichten – und die Antwort wird kommen.",
     "start": "Start",
     "reset": "Zurücksetzen",
     "share": "Teilen",
-    "shareCopy": "Link kopieren",
+    "shareCopy": "Kopieren",
     "shareCopied": "Kopiert!",
-    "answer": {
-      "yes": "Geh!",
-      "no": "Geh nicht",
-      "wait": "Warte"
-    }
-  },
-  "donate": {
-    "text": "Gutes kehrt vielfach zurück. Spenden gehen an Kinder und obdachlose Tiere.",
-    "cta": "Unterstützen"
-  },
-  "footer": {
-    "thanks": "Danke, dass du bei uns bist. Tue Gutes und sei glücklich.",
-    "blessing": "Segen für dich und deine Familie 🌼❤️",
-    "madeWithLove": "Mit Liebe und Licht gemacht"
+    "donate": "Spenden",
+    "hint": "Gib dem Höchsten Raum, deine Schritte zu führen. Spende, Gebet, guter Wille—und die Antwort kommt.",
+    "answer": { "yes": "Geh!", "no": "Geh nicht", "wait": "Warte" }
   }
 }
