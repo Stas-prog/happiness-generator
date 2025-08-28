@@ -1,4 +1,3 @@
-// components/Oracle.tsx
 "use client";
 
 import { useState } from "react";
@@ -17,11 +16,13 @@ type OracleStrings = {
 };
 
 export default function Oracle({
+  currentLocale,
   locale,
   strings
 }: {
   locale: string;
   strings: OracleStrings;
+  currentLocale: string
 }) {
   const [state, setState] = useState<"idle" | "thinking" | "done">("idle");
   const [result, setResult] = useState<string | null>(null);
@@ -62,10 +63,10 @@ export default function Oracle({
   return (
     <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
       <div className="flex items-center justify-between mb-4">
-        <h2 className="text-lg font-semibold">{strings.title}</h2>
-        {/* Кнопка донату поруч з підказкою — лінк відредагуєш на свій */}
+        <h2 className="text-lg text-green-600 font-semibold">{strings.title}</h2>
+        {/* Кнопка донату*/}
         <a
-          href="https://donate.stripe.com/test_123" target="_blank" rel="noreferrer"
+          href={`/${currentLocale}/donate`} target="_blank" rel="noreferrer"
           className="text-amber-300 hover:text-amber-200 text-sm"
         >
           {strings.donate}
@@ -118,8 +119,16 @@ export default function Oracle({
 
       {/* Підказка */}
       <div className="mt-6 text-sm text-slate-300">
-        <div className="font-medium text-slate-200 mb-1">{strings.hintTitle}</div>
-        <p>{strings.hint}</p>
+        <div className="mb-1 flex items-center justify-between gap-2">
+           <div className="font-semibold text-red-400 mb-1">{strings.hintTitle}</div>
+              <button className="bg-blue-600 px-2 py-1 rounded text-black hover:bg-blue-400">
+                  <a href={`/${currentLocale}/donate`} target="_blank" rel="noreferrer" 
+                  className="text-red-600 hover:text-red-400 text-sm">
+                   Donat
+                  </a>
+              </button>
+        </div>
+        <p className="text-gray-400">{strings.hint}</p>
       </div>
     </div>
   );

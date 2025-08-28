@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 "use client";
 
 import Link from "next/link";
@@ -16,9 +15,13 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
 
   return (
     <nav className="flex items-center gap-3">
-      <Link href={base} className="text-slate-200 hover:text-white">
+      <Link href={base} className="text-green-700 hover:text-white">
         Home
       </Link>
+      <Link href={`/${currentLocale}/donate`} className="text-green-700 hover:text-white">
+        Donate
+      </Link>
+
 
       <div className="ml-auto flex items-center gap-2">
         {LOCALES.map((l) => {

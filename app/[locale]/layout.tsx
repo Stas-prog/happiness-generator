@@ -2,6 +2,7 @@
 import type { Locale } from "../../lib/messages";
 import { SUPPORTED } from "../../lib/messages";
 import Navbar from "../../components/Navbar";
+import Footer from "components/Footer";
 
 export default function LocaleLayout({
   children,
@@ -21,13 +22,14 @@ export default function LocaleLayout({
           </div>
         </header>
         <main className="max-w-5xl mx-auto px-4 py-8">{children}</main>
-        <footer className="border-t border-slate-800 mt-12">
-          <div className="max-w-5xl mx-auto px-4 py-6 text-sm text-slate-400 flex items-center gap-2">
+        {/* <footer className="border-t border-slate-800 mt-12">
+          <div className="max-w-5xl mx-auto px-4 py-6 text-sm text-slate-400 flex items-center gap-2">Дім Світла
             <span>★</span>
             <span>♥</span>
             <span className="ml-2">© {new Date().getFullYear()}</span>
           </div>
-        </footer>
+        </footer> */}
+        <Footer />
       </body>
     </html>
   );

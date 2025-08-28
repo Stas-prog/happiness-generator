@@ -1,6 +1,7 @@
 import { getMessages } from "../../lib/messages";
 import Clock from "../../components/Clock";
 import Oracle from "../../components/Oracle";
+import Quote from "components/Quote";
 
 export default async function Page({ params }: { params: { locale: string } }) {
   const { locale, messages } = await getMessages(params.locale);
@@ -35,9 +36,11 @@ export default async function Page({ params }: { params: { locale: string } }) {
           ]}
         />
         <Oracle
+          currentLocale={locale}
           locale={locale}
           strings={messages.oracle}
         />
+        <Quote/>
       </section>
     </div>
   );
