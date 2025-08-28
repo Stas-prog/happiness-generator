@@ -121,9 +121,9 @@ export default function Oracle({
       <div className="mt-6 text-sm text-slate-300">
         <div className="mb-1 flex items-center justify-between gap-2">
            <div className="font-semibold text-red-400 mb-1">{strings.hintTitle}</div>
-              <button className="bg-blue-600 px-2 py-1 rounded text-black hover:bg-blue-400">
+              <button className="bg-blue-500 px-2 py-1 rounded text-black hover:bg-blue-400">
                   <a href={`/${currentLocale}/donate`} target="_blank" rel="noreferrer" 
-                  className="text-red-600 hover:text-red-400 text-sm">
+                  className="text-blue-800 hover:text-blue-950 text-sm">
                    Donat
                   </a>
               </button>

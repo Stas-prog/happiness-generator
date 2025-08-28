@@ -21,7 +21,20 @@ import "./globals.css";
 
 export const metadata = {
   title: "Happiness Generator",
-  description: "Minimal, fast, localized without next-intl"
+  description: "Trust the lot when options are equal.",
+  openGraph: {
+    title: "Happiness Generator",
+    description: "Trust the lot when options are equal.",
+    url: process.env.NEXT_PUBLIC_DOMAIN,
+    siteName: "Happiness Generator",
+    images: [{ url: "/og.png", width: 1200, height: 630 }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Happiness Generator",
+    description: "Trust the lot when options are equal.",
+    images: ["/og.png"]
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
