@@ -23,5 +23,20 @@
     "donate": "Donate",
     "hint": "Give the Most High room to guide your steps. Support, prayer, kind intent—and the answer will come.",
     "answer": { "yes": "Go!", "no": "Don't go", "wait": "Wait" }
+  },
+   "donate": {
+    "title": "Support the project",
+    "subtitle": "Your help allows the «Happiness Generator» to live and develop, supporting children and homeless animals. Every contribution is another step towards your success! 🚂✨",
+    "otherText": "If you want to support in another way, write to me at c-e21297@ukr.net",
+    "thankYou": "Thank you very much for your support!"
+  },
+  "essence": {
+    "title": "The Essence of the Happiness Generator ✨",
+    "text1": "Life is like one of the old games, such as ‘Mario’. The point isn’t just reaching the finish, but doing it wisely with the right strategy. If you don’t collect bonuses and grow stronger, you won’t clear the big obstacles. If you rush, you’ll fall into traps.",
+    "text2": "Life works the same way. It’s a program with rules. Walk with God in your heart, help the weak, do good — and you receive your “bonuses”: a timely hand, the right word, the right opportunity. With a pure heart, the Almighty shows the path and helps you overcome the scissors of fate.",
+    "text3": "The surest strategy is to do good wherever possible and never stand on the side of evil. If you err, realize it in time, correct it, make amends, and beware of false steps. Only those who do nothing make no mistakes; the point is to learn and become better.",
+    "text4": "The Happiness Generator is a reminder tool: to be or not to be; to go or to wait. It doesn’t decide for you — it helps you pause, breathe, and trust the Higher Power when choosing.",
+    "text5": "As Skovoroda said: “Know yourself — and you will find the Universe within”. We only shine a light on the path, the step is yours."
   }
+
 }

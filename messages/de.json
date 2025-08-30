@@ -23,5 +23,19 @@
     "donate": "Spenden",
     "hint": "Gib dem Höchsten Raum, deine Schritte zu führen. Spende, Gebet, guter Wille—und die Antwort kommt.",
     "answer": { "yes": "Geh!", "no": "Geh nicht", "wait": "Warte" }
+  },
+    "donate": {
+      "title": "Unterstütze das Projekt",
+      "subtitle": "Deine Hilfe ermöglicht es dem «Glücks-Generator», zu leben und sich zu entwickeln, indem er Kinder und obdachlose Tiere unterstützt. Jeder Beitrag ist ein weiterer Schritt zu deinem Erfolg! 🚂✨",
+      "otherText": "Wenn du auf andere Weise unterstützen möchtest, schreibe mir an c-e21297@ukr.net",
+      "thankYou": "Vielen Dank für deine Unterstützung!"
+    },
+    "essence": {
+    "title": "Das Wesen des Glücksgenerators ✨",
+    "text1": "Das Leben ist wie eines der alten Spiele, etwa „Mario“. Es geht nicht nur darum, das Ziel zu erreichen, sondern klug und mit der richtigen Strategie voranzukommen. Ohne Boni stärker zu werden — große Hindernisse überwindest du nicht. Eilst du, tappst du in Fallen.",
+    "text2": "Im Leben ist es genauso. Es ist ein Programm mit Regeln. Gehst du mit Gott im Herzen, hilfst den Schwachen und tust Gutes — erhältst du deine „Boni“: die rechtzeitige Hand, das richtige Wort, die passende Gelegenheit. Mit reinem Herzen zeigt der Allmächtige den Weg und hilft, die Scheren des Schicksals zu überwinden.",
+    "text3": "Die sicherste Strategie: wo möglich Gutes tun und niemals auf der Seite des Bösen stehen. Irrst du dich, erkenne es rechtzeitig, korrigiere es, mache es gut und hüte dich vor falschen Schritten. Fehlerfrei ist nur, wer nichts tut; entscheidend ist, zu lernen und besser zu werden.",
+    "text4": "Der Glücksgenerator ist ein Erinnerungswerkzeug: Sein oder Nichtsein; gehen oder warten. Er entscheidet nicht für dich — er hilft dir innezuhalten, zu atmen und der höheren Macht bei der Wahl zu vertrauen.",
+    "text5": "Wie Skoworoda sagte: „Erkenne dich selbst— und du findest das Universum in dir“. Wir beleuchten nur den Weg, den Schritt machst du."
   }
 }

@@ -22,6 +22,12 @@ export default function Clock({
     second: "2-digit"
   }).format(now);
 
+  const time2 = new Intl.DateTimeFormat(locale, {
+    day: "2-digit",
+    month: "2-digit",
+    year: "2-digit"
+  }).format(now);
+
   return (
     <div className="p-5 rounded-2xl bg-slate-900/60 border border-slate-800">
       {/* ЦИФРОВИЙ ЧАС поверх у центрі */}
@@ -44,6 +50,9 @@ export default function Clock({
         {lines.map((l, i) => (
           <div key={i}>{l}</div>
         ))}
+      </div>
+      <div className="text-3xl text-center mt-8 mb-6 font-semibold text-emerald-300 drop-shadow-sm select-none">
+        {time2}
       </div>
     </div>
   );

@@ -86,9 +86,10 @@ export default function Oracle({
       </div>
 
       {/* Відповідь */}
+      {result !== null? 
       <div className="min-h-[2.25rem] text-center text-xl font-semibold">
         {result ?? ""}
-      </div>
+      </div> : <div className="flex items-center justify-center"><div className="min-h-[2.25rem] text-center loader" /></div>}
 
       {/* Кнопки */}
       <div className="mt-6 flex flex-wrap gap-2 justify-center">
@@ -124,7 +125,7 @@ export default function Oracle({
               <button className="bg-blue-500 px-2 py-1 rounded text-black hover:bg-blue-400">
                   <a href={`/${currentLocale}/donate`} target="_blank" rel="noreferrer" 
                   className="text-blue-800 hover:text-blue-950 text-sm">
-                   Donat
+                   Donate
                   </a>
               </button>
         </div>

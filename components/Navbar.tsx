@@ -15,11 +15,14 @@ export default function Navbar({ currentLocale }: { currentLocale: string }) {
 
   return (
     <nav className="flex items-center gap-3">
-      <Link href={base} className="text-green-700 hover:text-white">
+      <Link href={base} className="text-green-600 hover:text-white">
         Home
       </Link>
-      <Link href={`/${currentLocale}/donate`} className="text-green-700 hover:text-white">
+      <Link href={`/${currentLocale}/donate`} className="text-green-600 hover:text-white">
         Donate
+      </Link>
+      <Link href={`/${currentLocale}/about`} className="text-green-600 hover:text-white">
+        About
       </Link>
 
 

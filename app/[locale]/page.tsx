@@ -1,7 +1,7 @@
 import { getMessages } from "../../lib/messages";
 import Clock from "../../components/Clock";
 import Oracle from "../../components/Oracle";
-import Quote from "components/Quote";
+import Quotes from "components/Quotes";
 
 export default async function Page({ params }: { params: { locale: string } }) {
   const { locale, messages } = await getMessages(params.locale);
@@ -40,8 +40,10 @@ export default async function Page({ params }: { params: { locale: string } }) {
           locale={locale}
           strings={messages.oracle}
         />
-        <Quote/>
+        
       </section>
+      {/* Цитати дня */}
+      <Quotes locale={locale}/>
     </div>
   );
 }

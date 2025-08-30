@@ -1,11 +1,38 @@
 {
-  "quotes": [
-    "Щастя не в речах, а в нас.",
-    "Хто шукає — знаходить.",
-    "Дорога з’являється під кроками того, хто йде."
+  "uk": [
+    { "text": "Все має свій час, і кожна справа під небом має свою пору.", "author": "Біблія, Екл. 3:1" },
+    { "text": "Пізнай себе — і знайдеш у собі Всесвіт.", "author": "Григорій Сковорода" },
+    { "text": "Не журися, що життя минає — радій, що воно було.", "author": "Омар Хаям" },
+    { "text": "Єдина справжня свобода — це свобода бути самим собою.", "author": "Ошо" },
+    { "text": "Той, хто переміг себе — сильніший за того, хто переміг тисячу воїнів.", "author": "Будда" },
+    { "text": "Хто знає міру — того доля береже.", "author": "Лао-Цзи" },
+    { "text": "Життя коротке; мистецтво жити — довге.", "author": "Сенека" },
+    { "text": "Те, що ти шукаєш — шукає тебе.", "author": "Джалаледдін Румі" },
+    { "text": "Щастя твого життя залежить від якості твоїх думок.", "author": "Марк Аврелій" },
+    { "text": "Сенс життя — знайти себе. Мета життя — віддати себе.", "author": "Махатма Ганді" }
   ],
-  "stories": [
-    "Коли варіанти були рівні, жереб підказав, і це зберегло місяці часу.",
-    "Один вибір у потрібний момент змінює вектор всього життя."
+  "en": [
+    { "text": "To everything there is a season, and a time to every purpose under heaven.", "author": "Bible, Ecclesiastes 3:1" },
+    { "text": "Know yourself—and you will find the universe within.", "author": "Hryhorii Skovoroda" },
+    { "text": "Do not grieve that life passes—rejoice that it has been.", "author": "Omar Khayyam" },
+    { "text": "The only real freedom is the freedom to be yourself.", "author": "Osho" },
+    { "text": "He who conquers himself is greater than he who conquers a thousand men.", "author": "Buddha" },
+    { "text": "He who knows when enough is enough will always have enough.", "author": "Laozi" },
+    { "text": "Life is short; the art of living is long.", "author": "Seneca" },
+    { "text": "What you seek is seeking you.", "author": "Rumi" },
+    { "text": "The happiness of your life depends upon the quality of your thoughts.", "author": "Marcus Aurelius" },
+    { "text": "The meaning of life is to find yourself. The purpose of life is to give yourself away.", "author": "Mahatma Gandhi" }
+  ],
+  "de": [
+    { "text": "Alles hat seine Zeit, und jedes Vorhaben unter dem Himmel hat seine Stunde.", "author": "Bibel, Prediger 3:1" },
+    { "text": "Erkenne dich selbst—und du findest das Universum in dir.", "author": "Hryhorij Skoworoda" },
+    { "text": "Trauere nicht, dass das Leben vergeht—freue dich, dass es war.", "author": "Omar Chayyam" },
+    { "text": "Die einzige wahre Freiheit ist die Freiheit, man selbst zu sein.", "author": "Osho" },
+    { "text": "Wer sich selbst besiegt, ist größer als der, der tausend Krieger besiegt.", "author": "Buddha" },
+    { "text": "Wer Maß kennt, den bewahrt das Schicksal.", "author": "Laozi" },
+    { "text": "Das Leben ist kurz; die Kunst zu leben ist lang.", "author": "Seneca" },
+    { "text": "Was du suchst, sucht dich.", "author": "Rumi" },
+    { "text": "Das Glück deines Lebens hängt von der Beschaffenheit deiner Gedanken ab.", "author": "Marcus Aurelius" },
+    { "text": "Der Sinn des Lebens ist, dich selbst zu finden. Der Zweck des Lebens ist, dich hinzugeben.", "author": "Mahatma Gandhi" }
   ]
 }
