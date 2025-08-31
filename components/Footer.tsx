@@ -1,10 +1,10 @@
 import DonateButton from "components/DonateButton";
 
 const socials = [
-  { name: 'Instagram', href: 'https://instagram.com/your', icon: '📸' },
-  { name: 'Facebook',  href: 'https://facebook.com/Віддам безкоштовно тваринку',  icon: '📘' },
-  { name: 'TikTok',    href: 'https://tiktok.com/@your',  icon: '🎵' },
-  { name: 'X (Twitter)', href: 'https://x.com/your',      icon: '🕊️' },
+  { name: 'Instagram', href: 'https://instagram.com/vital._1973', icon: '📸' },
+  { name: 'Facebook',  href: 'https://facebook.com/vitalij.skubcenko',  icon: '📘' },
+  { name: 'TikTok',    href: 'https://tiktok.com/@user7345086630888',  icon: '🎵' },
+  { name: 'X (Twitter)', href: 'https://x.com/SkubaVital777',      icon: '🕊️' },
 ];
 
 export default function Footer() {
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
         <nav className="flex gap-4">
           {socials.map(s => (
-            <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer"
+            <a key={s.name} href={s.href} target="_blank" rel="me noopener noreferrer"
                className="opacity-80 hover:opacity-100 transition">
               <span aria-hidden>{s.icon}</span> <span className="sr-only">{s.name}</span>
             </a>
