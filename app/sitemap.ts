@@ -4,7 +4,7 @@ const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 const LOCALES = ['uk','en','de'] as const;
 
 // Додай тут шляхів більше за потреби
-const PAGES = ['', '/about', '/donate'];
+const PAGES = ['','/donate', '/about'];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -28,16 +28,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
   return entries;
-}
-
-
-
-export function GET() {
-  // const base = process.env.NEXT_PUBLIC_DOMAIN || "http://localhost:3000";
-  const urls = ["uk","en","de"].map(l => `${BASE}/${l}`);
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${urls.map(u => `<url><loc>${u}</loc></url>`).join("")}
-  </urlset>`;
-  return new Response(xml, { headers: { "content-type": "application/xml" } });
 }
