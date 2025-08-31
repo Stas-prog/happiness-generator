@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="uk"> 
     <head>
 <meta name="google-site-verification" content="7P7IsqPfFXMQABIZN0T44GZolCul0Z9unEH7T4EcJIY" />
+<meta name="msvalidate.01" content="527A1635453DA8D34E75FB340CAA8F40" />
     </head>  
       <body className="min-h-screen bg-slate-950 text-slate-50 antialiased">
         {children}
