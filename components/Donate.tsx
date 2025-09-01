@@ -97,7 +97,7 @@ const skrillUrl = process.env.NEXT_PUBLIC_SKRILL_URL || "https://skrill.me/rq/Vi
        </div>
    </div>
       <p className="max-w-md text-sm opacity-70">
-        {strings.otherText}
+        {strings.otherText} <br></br> c-e21297@ukr.net
       </p>
       <p className="text-green-400 font-semibold">{strings.thankYou}❤️</p>
     </div>

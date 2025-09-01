@@ -1,38 +1,262 @@
 {
-  "uk": [
-    { "text": "Все має свій час, і кожна справа під небом має свою годину.", "author": "Біблія, Екл. 3:1" },
-    { "text": "Пізнай себе — і знайдеш у собі Всесвіт.", "author": "Григорій Сковорода" },
-    { "text": "Не журися, що життя минає — радій, що воно було.", "author": "Омар Хаям" },
-    { "text": "Єдина справжня свобода — це свобода бути самим собою.", "author": "Ошо" },
-    { "text": "Той, хто переміг себе — сильніший за того, хто переміг тисячу воїнів.", "author": "Будда" },
-    { "text": "Хто знає міру — того доля береже.", "author": "Лао-Цзи" },
-    { "text": "Життя коротке; мистецтво жити — довге.", "author": "Сенека" },
-    { "text": "Те, що ти шукаєш — шукає тебе.", "author": "Джалаледдін Румі" },
-    { "text": "Щастя твого життя залежить від якості твоїх думок.", "author": "Марк Аврелій" },
-    { "text": "Сенс життя — знайти себе. Мета життя — віддати себе.", "author": "Махатма Ганді" }
-  ],
-  "en": [
-    { "text": "To everything there is a season, and a time to every purpose under heaven.", "author": "Bible, Ecclesiastes 3:1" },
-    { "text": "Know yourself—and you will find the universe within.", "author": "Hryhorii Skovoroda" },
-    { "text": "Do not grieve that life passes—rejoice that it has been.", "author": "Omar Khayyam" },
-    { "text": "The only real freedom is the freedom to be yourself.", "author": "Osho" },
-    { "text": "He who conquers himself is greater than he who conquers a thousand men.", "author": "Buddha" },
-    { "text": "He who knows when enough is enough will always have enough.", "author": "Laozi" },
-    { "text": "Life is short; the art of living is long.", "author": "Seneca" },
-    { "text": "What you seek is seeking you.", "author": "Rumi" },
-    { "text": "The happiness of your life depends upon the quality of your thoughts.", "author": "Marcus Aurelius" },
-    { "text": "The meaning of life is to find yourself. The purpose of life is to give yourself away.", "author": "Mahatma Gandhi" }
-  ],
-  "de": [
-    { "text": "Alles hat seine Zeit, und jedes Vorhaben unter dem Himmel hat seine Stunde.", "author": "Bibel, Prediger 3:1" },
-    { "text": "Erkenne dich selbst—und du findest das Universum in dir.", "author": "Hryhorij Skoworoda" },
-    { "text": "Trauere nicht, dass das Leben vergeht—freue dich, dass es war.", "author": "Omar Chayyam" },
-    { "text": "Die einzige wahre Freiheit ist die Freiheit, man selbst zu sein.", "author": "Osho" },
-    { "text": "Wer sich selbst besiegt, ist größer als der, der tausend Krieger besiegt.", "author": "Buddha" },
-    { "text": "Wer Maß kennt, den bewahrt das Schicksal.", "author": "Laozi" },
-    { "text": "Das Leben ist kurz; die Kunst zu leben ist lang.", "author": "Seneca" },
-    { "text": "Was du suchst, sucht dich.", "author": "Rumi" },
-    { "text": "Das Glück deines Lebens hängt von der Beschaffenheit deiner Gedanken ab.", "author": "Marcus Aurelius" },
-    { "text": "Der Sinn des Lebens ist, dich selbst zu finden. Der Zweck des Lebens ist, dich hinzugeben.", "author": "Mahatma Gandhi" }
+  "quotes": [
+    {
+  "id": "buddha_self_victory",
+  "uk": { "text": "Краще перемогти себе самого, ніж здобути тисячі перемог у битвах. Тоді перемога буде твоєю, її не відбере ні ангел, ні демон, ні рай, ні пекло.", "author": "Будда" },
+  "en": { "text": "It is better to conquer yourself than to win a thousand battles. Then the victory is yours. It cannot be taken from you, not by angels or demons, heaven or hell.", "author": "Buddha" },
+  "de": { "text": "Es ist besser, sich selbst zu besiegen, als tausend Schlachten zu gewinnen. Dann gehört der Sieg dir. Er kann dir nicht genommen werden, weder von Engeln noch von Dämonen, weder vom Himmel noch von der Hölle.", "author": "Buddha" }
+},
+{
+  "id": "nietzsche_why_live",
+  "uk": { "text": "Хто має чому жити, той витримає майже будь-яке як.", "author": "Фрідріх Ніцше" },
+  "en": { "text": "He who has a why to live can bear almost any how.", "author": "Friedrich Nietzsche" },
+  "de": { "text": "Wer ein Warum zum Leben hat, erträgt fast jedes Wie.", "author": "Friedrich Nietzsche" }
+},
+{
+  "id": "pascal_heart_reason",
+  "uk": { "text": "Серце має причини, яких розум не знає.", "author": "Блез Паскаль" },
+  "en": { "text": "The heart has its reasons, of which reason knows nothing.", "author": "Blaise Pascal" },
+  "de": { "text": "Das Herz hat seine Gründe, die der Verstand nicht kennt.", "author": "Blaise Pascal" }
+},
+{
+  "id": "rousseau_chains",
+  "uk": { "text": "Людина народжується вільною, але всюди вона у кайданах.", "author": "Жан-Жак Руссо" },
+  "en": { "text": "Man is born free, and everywhere he is in chains.", "author": "Jean-Jacques Rousseau" },
+  "de": { "text": "Der Mensch wird frei geboren, und überall liegt er in Ketten.", "author": "Jean-Jacques Rousseau" }
+},
+{
+  "id": "buddha_thoughts",
+  "uk": { "text": "Усе, що ми є, — це результат наших думок.", "author": "Будда" },
+  "en": { "text": "All that we are is the result of what we have thought.", "author": "Buddha" },
+  "de": { "text": "Alles, was wir sind, ist das Ergebnis dessen, was wir gedacht haben.", "author": "Buddha" }
+},
+    {
+      "id": "ecclesiastes_3_1",
+      "uk": { "text": "Все має свій час, і кожна справа під небом має свою годину.", "author": "Біблія, Екл. 3:1" },
+      "en": { "text": "To everything there is a season, and a time for every purpose under heaven.", "author": "Bible, Ecclesiastes 3:1" },
+      "de": { "text": "Alles hat seine Zeit, und jegliches Vorhaben unter dem Himmel hat seine Stunde.", "author": "Bibel, Prediger 3:1" }
+    },
+    {
+      "id": "skovoroda_know_thyself",
+      "uk": { "text": "Пізнай себе — і знайдеш у собі Всесвіт.", "author": "Григорій Сковорода" },
+      "en": { "text": "Know yourself—and you will find the universe within.", "author": "Hryhorii Skovoroda" },
+      "de": { "text": "Erkenne dich selbst—und du findest das Universum in dir.", "author": "Hryhorij Skoworoda" }
+    },
+    {
+      "id": "khayyam_life_was",
+      "uk": { "text": "Не журися, що життя минає — радій, що воно було.", "author": "Омар Хаям" },
+      "en": { "text": "Do not grieve that life passes—rejoice that it has been.", "author": "Omar Khayyam" },
+      "de": { "text": "Trauere nicht, dass das Leben vergeht—freue dich, dass es gewesen ist.", "author": "Omar Chayyām" }
+    },
+    {
+      "id": "jesus_beatitudes_peacemakers",
+      "uk": { "text": "Блаженні миротворці, бо вони синами Божими назвуться.", "author": "Біблія, Мф. 5:9" },
+      "en": { "text": "Blessed are the peacemakers, for they shall be called sons of God.", "author": "Bible, Matt. 5:9" },
+      "de": { "text": "Selig sind die Friedfertigen; denn sie werden Gottes Kinder heißen.", "author": "Bibel, Mt 5:9" }
+    },
+    {
+      "id": "skovoroda_heart",
+      "uk": { "text": "Серце людське — оселя щастя.", "author": "Григорій Сковорода" },
+      "en": { "text": "The human heart is the dwelling of happiness.", "author": "Hryhorii Skovoroda" },
+      "de": { "text": "Das menschliche Herz ist die Wohnung des Glücks.", "author": "Hryhorij Skoworoda" }
+    },
+    {
+      "id": "osho_trust",
+      "uk": { "text": "Довіряй життю — і воно відкриє двері там, де ти бачив стіну.", "author": "Ошо" },
+      "en": { "text": "Trust life—and it will open doors where you saw only walls.", "author": "Osho" },
+      "de": { "text": "Vertraue dem Leben—und es öffnet Türen, wo du nur Wände sahst.", "author": "Osho" }
+    },
+    {
+      "id": "khayyam_today",
+      "uk": { "text": "Живи сьогодні — вчора вже нема, а завтра ще не настало.", "author": "Омар Хаям" },
+      "en": { "text": "Live today—yesterday is gone, tomorrow not yet come.", "author": "Omar Khayyam" },
+      "de": { "text": "Lebe heute—gestern ist fort, morgen noch nicht da.", "author": "Omar Chayyām" }
+    },
+    {
+      "id": "psalm_27_1",
+      "uk": { "text": "Господь — світло моє і спасіння моє: кого мені боятися?", "author": "Біблія, Пс. 27:1" },
+      "en": { "text": "The Lord is my light and my salvation—whom shall I fear?", "author": "Bible, Psalm 27:1" },
+      "de": { "text": "Der HERR ist mein Licht und mein Heil—vor wem sollte ich mich fürchten?", "author": "Bibel, Psalm 27:1" }
+    },
+    {
+      "id": "skovoroda_harmony",
+      "uk": { "text": "Шукаючи зовні, втрачаєш всередині.", "author": "Григорій Сковорода" },
+      "en": { "text": "Seeking outside, you lose within.", "author": "Hryhorii Skovoroda" },
+      "de": { "text": "Suchst du außen, verlierst du innen.", "author": "Hryhorij Skoworoda" }
+    },
+    {
+      "id": "proverbs_16_9",
+      "uk": { "text": "Серце людини обдумує дорогу свою, та Господь керує кроками її.", "author": "Біблія, Прип. 16:9" },
+      "en": { "text": "A man’s heart plans his way, but the Lord directs his steps.", "author": "Bible, Proverbs 16:9" },
+      "de": { "text": "Des Menschen Herz erdenkt sich seinen Weg; der HERR aber lenkt seine Schritte.", "author": "Bibel, Sprüche 16:9" }
+    },
+    {
+      "id": "plato_cave",
+      "uk": { "text": "Ми легко пробачаємо дитині, яка боїться темряви; справжня трагедія життя — коли люди бояться світла.", "author": "Платон" },
+      "en": { "text": "We can easily forgive a child who is afraid of the dark; the real tragedy of life is when men are afraid of the light.", "author": "Plato" },
+      "de": { "text": "Wir können einem Kind leicht verzeihen, das sich vor der Dunkelheit fürchtet; die eigentliche Tragödie des Lebens ist, wenn Menschen das Licht fürchten.", "author": "Platon" }
+    },
+    {
+      "id": "aristotle_goal",
+      "uk": { "text": "Мета мистецтва — показати не зовнішній вигляд речей, а їхню внутрішню суть.", "author": "Арістотель" },
+      "en": { "text": "The aim of art is to represent not the outward appearance of things, but their inward significance.", "author": "Aristotle" },
+      "de": { "text": "Das Ziel der Kunst ist es, nicht das äußere Erscheinungsbild der Dinge darzustellen, sondern ihre innere Bedeutung.", "author": "Aristoteles" }
+    },
+    {
+      "id": "confucius_step",
+      "uk": { "text": "Навіть шлях у тисячу миль починається з одного кроку.", "author": "Конфуцій" },
+      "en": { "text": "A journey of a thousand miles begins with a single step.", "author": "Confucius" },
+      "de": { "text": "Eine Reise von tausend Meilen beginnt mit einem einzigen Schritt.", "author": "Konfuzius" }
+    },
+    {
+      "id": "laozi_water",
+      "uk": { "text": "Найм’якіше у світі перемагає найтвердіше.", "author": "Лао-цзи" },
+      "en": { "text": "The softest thing in the world overcomes the hardest.", "author": "Laozi" },
+      "de": { "text": "Das Weichste auf der Welt besiegt das Härteste.", "author": "Laozi" }
+    },
+    {
+      "id": "seneca_time",
+      "uk": { "text": "Не коротке життя нам дане, а ми самі робимо його коротким.", "author": "Сенека" },
+      "en": { "text": "It is not that we have a short time to live, but that we waste much of it.", "author": "Seneca" },
+      "de": { "text": "Es ist nicht so, dass wir wenig Zeit zum Leben haben, sondern dass wir viel davon verschwenden.", "author": "Seneca" }
+    },
+    {
+      "id": "marcus_aurelius_soul",
+      "uk": { "text": "Твоя душа забарвлюється кольором твоїх думок.", "author": "Марк Аврелій" },
+      "en": { "text": "The soul becomes dyed with the color of its thoughts.", "author": "Marcus Aurelius" },
+      "de": { "text": "Die Seele färbt sich in der Farbe ihrer Gedanken.", "author": "Marcus Aurelius" }
+    },
+    {
+      "id": "epictetus_freedom",
+      "uk": { "text": "Свобода — це усвідомлення необхідності.", "author": "Епіктет" },
+      "en": { "text": "Freedom is the recognition of necessity.", "author": "Epictetus" },
+      "de": { "text": "Freiheit ist die Erkenntnis der Notwendigkeit.", "author": "Epiktet" }
+    },
+    {
+      "id": "bible_psalm23",
+      "uk": { "text": "Господь — Пастир мій; я не буду мати нестачі.", "author": "Біблія, Пс. 23:1" },
+      "en": { "text": "The Lord is my shepherd; I shall not want.", "author": "Bible, Psalm 23:1" },
+      "de": { "text": "Der HERR ist mein Hirte; mir wird nichts mangeln.", "author": "Bibel, Psalm 23:1" }
+    },
+    {
+      "id": "skovoroda_freedom",
+      "uk": { "text": "Свобода — це пізнання своєї природи.", "author": "Григорій Сковорода" },
+      "en": { "text": "Freedom is the knowledge of one’s own nature.", "author": "Hryhorii Skovoroda" },
+      "de": { "text": "Freiheit ist die Erkenntnis der eigenen Natur.", "author": "Hryhorij Skoworoda" }
+    },
+    {
+      "id": "osho_love",
+      "uk": { "text": "Любов — це міст між тобою і всім.", "author": "Ошо" },
+      "en": { "text": "Love is the bridge between you and everything.", "author": "Osho" },
+      "de": { "text": "Liebe ist die Brücke zwischen dir und allem.", "author": "Osho" }
+    },
+    {
+      "id": "khayyam_wine",
+      "uk": { "text": "Життя коротке — випий келих вина і усміхнись.", "author": "Омар Хаям" },
+      "en": { "text": "Life is short—drink a cup of wine and smile.", "author": "Omar Khayyam" },
+      "de": { "text": "Das Leben ist kurz—trinke ein Glas Wein und lächle.", "author": "Omar Chayyām" }
+    },
+    {
+      "id": "bible_john8_32",
+      "uk": { "text": "І пізнаєте правду, а правда зробить вас вільними.", "author": "Біблія, Ів. 8:32" },
+      "en": { "text": "Then you will know the truth, and the truth will set you free.", "author": "Bible, John 8:32" },
+      "de": { "text": "Und ihr werdet die Wahrheit erkennen, und die Wahrheit wird euch frei machen.", "author": "Bibel, Johannes 8:32" }
+    },
+    {
+      "id": "bible_matt7_7",
+      "uk": { "text": "Просіть — і буде вам дано; шукайте — і знайдете.", "author": "Біблія, Мф. 7:7" },
+      "en": { "text": "Ask, and it will be given to you; seek, and you will find.", "author": "Bible, Matthew 7:7" },
+      "de": { "text": "Bittet, und es wird euch gegeben; suchet, und ihr werdet finden.", "author": "Bibel, Matthäus 7:7" }
+    },
+    {
+      "id": "bible_prov4_23",
+      "uk": { "text": "Над усе, що лише стережеться, серце своє стережи, бо з нього походить життя.", "author": "Біблія, Прип. 4:23" },
+      "en": { "text": "Above all else, guard your heart, for everything you do flows from it.", "author": "Bible, Proverbs 4:23" },
+      "de": { "text": "Behüte dein Herz mehr als alles, was zu bewahren ist; denn von ihm geht das Leben aus.", "author": "Bibel, Sprüche 4:23" }
+    },
+    {
+      "id": "tolstoy_kindness",
+      "uk": { "text": "Є лише одна справжня сила — це доброта.", "author": "Лев Толстой" },
+      "en": { "text": "There is only one real strength—kindness.", "author": "Leo Tolstoy" },
+      "de": { "text": "Es gibt nur eine wirkliche Kraft—die Güte.", "author": "Leo Tolstoi" }
+    },
+    {
+      "id": "moem_weaver",
+      "uk": { "text": "Життя — це килим, який ми тчемо з власних пристрастей і вчинків.", "author": "Сомерсет Моем" },
+      "en": { "text": "Life is a tapestry woven from our passions and deeds.", "author": "Somerset Maugham" },
+      "de": { "text": "Das Leben ist ein Teppich, gewebt aus unseren Leidenschaften und Taten.", "author": "Somerset Maugham" }
+    },
+    {
+      "id": "feuchtwanger_reason",
+      "uk": { "text": "Історія — це боротьба розуму проти натовпу.", "author": "Ліон Фейхтвангер" },
+      "en": { "text": "History is the struggle of reason against the crowd.", "author": "Lion Feuchtwanger" },
+      "de": { "text": "Geschichte ist der Kampf der Vernunft gegen die Menge.", "author": "Lion Feuchtwanger" }
+    },
+    {
+      "id": "shakespeare_be",
+      "uk": { "text": "Бути чи не бути — ось питання.", "author": "Вільям Шекспір" },
+      "en": { "text": "To be, or not to be—that is the question.", "author": "William Shakespeare" },
+      "de": { "text": "Sein oder Nichtsein, das ist hier die Frage.", "author": "William Shakespeare" }
+    },
+    {
+      "id": "oscar_wilde_be_yourself",
+      "uk": { "text": "Будь собою; всі інші ролі вже зайняті.", "author": "Оскар Вайльд" },
+      "en": { "text": "Be yourself; everyone else is already taken.", "author": "Oscar Wilde" },
+      "de": { "text": "Sei du selbst; alle anderen Rollen sind bereits vergeben.", "author": "Oscar Wilde" }
+    },
+    {
+      "id": "nietzsche_dance",
+      "uk": { "text": "Можливо танцювати навіть на краю безодні.", "author": "Фрідріх Ніцше" },
+      "en": { "text": "One must still have chaos in oneself to be able to give birth to a dancing star.", "author": "Friedrich Nietzsche" },
+      "de": { "text": "Man muss noch Chaos in sich haben, um einen tanzenden Stern gebären zu können.", "author": "Friedrich Nietzsche" }
+    },
+    {
+      "id": "einstein_imagination",
+      "uk": { "text": "Уява важливіша за знання.", "author": "Альберт Ейнштейн" },
+      "en": { "text": "Imagination is more important than knowledge.", "author": "Albert Einstein" },
+      "de": { "text": "Phantasie ist wichtiger als Wissen.", "author": "Albert Einstein" }
+    },
+    {
+      "id": "gandhi_change",
+      "uk": { "text": "Будь тією зміною, яку хочеш бачити у світі.", "author": "Махатма Ганді" },
+      "en": { "text": "Be the change that you wish to see in the world.", "author": "Mahatma Gandhi" },
+      "de": { "text": "Sei du selbst die Veränderung, die du dir für die Welt wünschst.", "author": "Mahatma Gandhi" }
+    },
+    {
+      "id": "mandela_courage",
+      "uk": { "text": "Я навчився, що мужність — це не відсутність страху, а перемога над ним.", "author": "Нельсон Мандела" },
+      "en": { "text": "I learned that courage was not the absence of fear, but the triumph over it.", "author": "Nelson Mandela" },
+      "de": { "text": "Ich habe gelernt, dass Mut nicht die Abwesenheit von Angst ist, sondern der Sieg über sie.", "author": "Nelson Mandela" }
+    },
+    {
+      "id": "hegel_real",
+      "uk": { "text": "Все розумне є дійсним, і все дійсне є розумним.", "author": "Георг Гегель" },
+      "en": { "text": "What is rational is real; and what is real is rational.", "author": "Georg Hegel" },
+      "de": { "text": "Was vernünftig ist, das ist wirklich; und was wirklich ist, das ist vernünftig.", "author": "Georg Hegel" }
+    },
+    {
+      "id": "nietzsche_star",
+      "uk": { "text": "Треба мати хаос у собі, щоб породити танцюючу зірку.", "author": "Фрідріх Ніцше" },
+      "en": { "text": "One must still have chaos in oneself to be able to give birth to a dancing star.", "author": "Friedrich Nietzsche" },
+      "de": { "text": "Man muss noch Chaos in sich haben, um einen tanzenden Stern gebären zu können.", "author": "Friedrich Nietzsche" }
+    },
+    {
+      "id": "schopenhauer_will",
+      "uk": { "text": "Світ — це моя уява і моя воля.", "author": "Артур Шопенгауер" },
+      "en": { "text": "The world is my representation and my will.", "author": "Arthur Schopenhauer" },
+      "de": { "text": "Die Welt ist meine Vorstellung und mein Wille.", "author": "Arthur Schopenhauer" }
+    },
+    {
+      "id": "tolstoy_love",
+      "uk": { "text": "Є тільки одна істинна сила — це любов.", "author": "Лев Толстой" },
+      "en": { "text": "There is only one true strength — love.", "author": "Leo Tolstoy" },
+      "de": { "text": "Es gibt nur eine wahre Kraft – die Liebe.", "author": "Leo Tolstoy" }
+    },
+    {
+      "id": "dostoevsky_beauty",
+      "uk": { "text": "Краса врятує світ.", "author": "Федір Достоєвський" },
+      "en": { "text": "Beauty will save the world.", "author": "Fyodor Dostoevsky" },
+      "de": { "text": "Die Schönheit wird die Welt retten.", "author": "Fjodor Dostojewski" }
+    }
   ]
 }

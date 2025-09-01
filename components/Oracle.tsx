@@ -109,13 +109,13 @@ export default function Oracle({
             {strings.reset}
           </button>
         )}
-        <button
+        {/* <button
           onClick={copyLink}
           className="px-4 py-2 rounded border border-slate-700 text-slate-200 hover:bg-slate-800"
           title={strings.shareCopy}
         >
           {copied ? strings.shareCopied : strings.share}
-        </button>
+        </button> */}
       </div>
 
       {/* Підказка */}
