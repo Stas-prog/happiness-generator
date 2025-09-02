@@ -1,4 +1,3 @@
-// app/[locale]/layout.tsx
 import type { Locale } from "../../lib/messages";
 import { SUPPORTED } from "../../lib/messages";
 import Navbar from "../../components/Navbar";
