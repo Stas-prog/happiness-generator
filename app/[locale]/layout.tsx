@@ -1,4 +1,6 @@
 import type { Metadata, ResolvingMetadata } from "next";
+import Footer from "../../components/Footer";
+import Navbar from "../../components/Navbar";
 
 type Props = { children: React.ReactNode; params: { locale: "uk" | "en" | "de" } };
 
@@ -105,7 +107,13 @@ export default function LocaleLayout({ children, params }: Props) {
         />
       </head>
       <body className="min-h-screen bg-slate-950 text-slate-50 antialiased">
-        {children}
+        <header className="border-b border-slate-800">
+          <div className="max-w-5xl mx-auto px-4 py-3">
+            <Navbar currentLocale={locale} />
+          </div>
+        </header>
+        <main className="max-w-5xl mx-auto px-4 py-8">{children}</main>
+        <Footer />
       </body>
     </html>
   );
