@@ -1,84 +1,111 @@
-import type { Locale } from "../../lib/messages";
-import { SUPPORTED } from "../../lib/messages";
-import Navbar from "../../components/Navbar";
-import Footer from "components/Footer";
-import type {Metadata} from 'next';
+import type { Metadata, ResolvingMetadata } from "next";
 
-const LOCALES = ['uk','en','de'] as const;
-const TITLES = {
-  uk: 'Генератор Щастя — бути чи не бути',
-  en: 'Happiness Generator — to be or not to be',
-  de: 'Glücksgenerator — sein oder nicht sein'
-};
-const DESCR = {
-  uk: 'Коли варіанти рівні — довірся жеребу: йти чи зачекати. Підказки, цитати, світло, орел і решка, оракул.',
-  en: 'When choices are equal, trust a fair toss: go or wait. Prompts, quotes, light, heads or tails, oracle.',
-  de: 'Wenn Optionen gleich sind: Los entscheide — gehen oder warten. Hinweise, Zitate, Licht, Kopf oder Zahl, orakel.'
-};
+type Props = { children: React.ReactNode; params: { locale: "uk" | "en" | "de" } };
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+
+const dict: Record<"uk" | "en" | "de", { title: string; description: string; keywords: string[] }> 
+= {
+  uk: {
+    title: "Генератор Щастя",
+    description: "Коли варіанти рівні — довірся жеребу.",
+    keywords: ["генератор щастя", "вибір", "оракул", "рішення", "жереб", "орел і решка", "кинути монетку", "цитати"],
+  },
+  en: {
+    title: "Happiness Generator",
+    description: "When options are equal—trust the lot.",
+    keywords: ["happiness generator", "choice", "oracle", "decision", "lot", "heads or tails", "coin flip", "quotes"],
+  },
+  de: {
+    title: "Glücks-Generator",
+    description: "Wenn Optionen gleich sind – vertraue dem Los.",
+    keywords: ["glücksgenerator", "wahl", "orakel", "entscheidung", "los", "kopf oder zahl", "münzwurf", "zitate"],
+  },
+} as const;
 
 export async function generateMetadata(
-  {params}: {params: {locale: string}}
+  { params }: { params: Props["params"] },
+  _parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const locale = (['uk','en','de'].includes(params.locale) ? params.locale : 'uk') as 'uk'|'en'|'de';
+  const { locale } = params;
+  const meta = dict[locale] ?? dict.uk;
 
-  // hreflang
+  // Абсолютні URL
+  const url = `${SITE}/${locale}`;
+  const ogImage = `${SITE}/og.png`;
+
+  // hreflang альтернатива
   const languages = {
-    uk: `${BASE}/uk`,
-    en: `${BASE}/en`,
-    de: `${BASE}/de`,
-    'x-default': `${BASE}/uk`
-  };
-
-  const canonical = `${BASE}/${locale}`;
+    en: `${SITE}/en`,
+    uk: `${SITE}/uk`,
+    de: `${SITE}/de`,
+    "x-default": SITE,
+  } as const;
 
   return {
-    title: TITLES[locale],
-    description: DESCR[locale],
-    metadataBase: new URL(BASE),
-    alternates: { canonical, languages },
+    title: meta.title,
+    description: meta.description,
+    keywords: meta.keywords,
+    alternates: {
+      canonical: url,
+      languages,
+    },
     openGraph: {
-      type: 'website',
-      url: canonical,
-      title: TITLES[locale],
-      description: DESCR[locale],
-      siteName: 'Happiness Generator',
-      images: [
-        { url: `/og/${locale}.png`, width: 1200, height: 630, alt: TITLES[locale] }
-      ],
+      type: "website",
+      url,
+      siteName: meta.title,
+      title: meta.title,
+      description: meta.description,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: meta.title }],
       locale,
-      alternateLocale: ['uk','en','de'].filter(l => l !== locale)
+      alternateLocale: ["uk", "en", "de"].filter(l => l !== locale),
     },
     twitter: {
-      card: 'summary_large_image',
-      title: TITLES[locale],
-      description: DESCR[locale],
-      images: [`/og/${locale}.png`]
-    }
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: [ogImage],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    // Додаткові мікророзмітки (JSON-LD)
+    other: {
+      // Обережно: нижче вставимо в <head> через script у компоненті Layout
+    },
   };
 }
 
+export default function LocaleLayout({ children, params }: Props) {
+  const { locale } = params;
+  const meta = dict[locale] ?? dict.uk;
+  const url = `${SITE}/${locale}`;
 
-export default function LocaleLayout({
-  children,
-  params
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) {
-  const locale = (SUPPORTED.includes(params.locale as Locale) ? params.locale : "uk") as Locale;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: meta.title,
+    url,
+    inLanguage: locale,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE}/${locale}?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
 
   return (
     <html lang={locale}>
-      <body className="min-h-screen bg-slate-950 text-slate-50">
-        <header className="border-b border-slate-800">
-          <div className="max-w-5xl mx-auto px-4 py-3">
-            <Navbar currentLocale={locale} />
-          </div>
-        </header>
-        <main className="max-w-5xl mx-auto px-4 py-8">{children}</main>
-        <Footer />
+      <head>
+        {/* JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body className="min-h-screen bg-slate-950 text-slate-50 antialiased">
+        {children}
       </body>
     </html>
   );
