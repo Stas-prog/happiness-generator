@@ -30,6 +30,10 @@
   "en": { "text": "All that we are is the result of what we have thought.", "author": "Buddha" },
   "de": { "text": "Alles, was wir sind, ist das Ergebnis dessen, was wir gedacht haben.", "author": "Buddha" }
 },
+{      "id": "skovoroda_zaboboni",
+      "uk": { "text": "Облиш забобони, обмий совість, а потім одежу, залиш усі свої хиби і підіймайся!", "author": "Григорій Сковорода" },
+      "en": { "text": "Leave your prejudices, wash your conscience, and then your clothes, leave all your faults and rise!", "author": "Hryhorii Skovoroda" },
+      "de": { "text": "Lass deine Vorurteile hinter dir, wasche dein Gewissen und dann deine Kleider, lass alle deine Fehler hinter dir und steh auf!", "author": "Hryhorij Skoworoda" }},
     {
       "id": "ecclesiastes_3_1",
       "uk": { "text": "Все має свій час, і кожна справа під небом має свою годину.", "author": "Біблія, Екл. 3:1" },

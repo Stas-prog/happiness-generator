@@ -12,7 +12,9 @@ export default function Footer() {
     <footer className="mt-16 border-t border-white/10 py-8 text-sm">
       <div className="container mx-auto px-4 flex flex-col gap-4 text-center items-center sm:flex-row sm:items-center sm:justify-between">
         <p className="opacity-70">
-          З любов’ю <span aria-hidden>❤️</span> і світлом <span aria-hidden>⭐</span> · Дім Світла
+          З любов’ю <span aria-hidden>❤️</span> і світлом
+          <span aria-hidden>⭐</span> · &nbsp;
+          <a href="https://dim-svitla-love-dobra.vercel.app" target="_blank" rel="me noopener noreferrer">Дім Світла</a>
         </p>
        <div className="flex-col flex-wrap sm:flex-row  gap-3">
           <DonateButton>Підтримати (PayPal)</DonateButton>
