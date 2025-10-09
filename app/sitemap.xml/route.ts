@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import { NextResponse } from "next/server";
 
 const BASE = (process.env.NEXT_PUBLIC_SITE_URL || "https://happiness-generator.vercel.app").replace(/\/+$/, "");
