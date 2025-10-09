@@ -4,7 +4,11 @@ const BASE = (process.env.NEXT_PUBLIC_SITE_URL || "https://happiness-generator.v
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: `${BASE}/sitemap.xml`,
+    sitemap: [
+      "https://happiness-generator.vercel.app/sitemap.xml",
+      `${BASE}/sitemap.xml`,
+      '/sitemap.xml',
+    ],
     host: BASE,
   };
 }

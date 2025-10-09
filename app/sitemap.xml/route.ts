@@ -15,7 +15,8 @@ export async function GET() {
 
   // простий, “несварливий” XML без alternates/hreflang — дружній для всіх сервісів
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls.map((u) => `  <url>
     <loc>${u}</loc>
     <lastmod>${now}</lastmod>
@@ -25,10 +26,11 @@ ${urls.map((u) => `  <url>
 </urlset>`;
 
   return new NextResponse(xml, {
+    status: 200,
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
       // на час діагностики відключимо кеш; потім можна поставити max-age=3600
-      "Cache-Control": "no-store, max-age=0",
+      'Cache-Control': 'no-store, no-cache, must-revalidate, max-age=0',
     },
   });
 }
