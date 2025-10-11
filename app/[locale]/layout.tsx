@@ -72,9 +72,7 @@ export async function generateMetadata(
       index: true,
       follow: true,
     },
-    // Додаткові мікророзмітки (JSON-LD)
     other: {
-      // Обережно: нижче вставимо в <head> через script у компоненті Layout
     },
   };
 }
@@ -100,6 +98,8 @@ export default function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <head>
+        <meta name='freelancehunt' content='81342dccc34bc86'/>
+
         {/* JSON-LD */}
         <script
           type="application/ld+json"
