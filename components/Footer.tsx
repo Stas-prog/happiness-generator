@@ -1,9 +1,9 @@
 import DonateButton from "components/DonateButton";
 
 const socials = [
-  { name: 'Instagram', href: 'https://instagram.com/vital._1973', icon: '📸' },
+  { name: 'Instagram', href: 'https://instagram.com/cosmocatsua', icon: '📸' },
   { name: 'Facebook',  href: 'https://facebook.com/vitalij.skubcenko',  icon: '📘' },
-  { name: 'TikTok',    href: 'https://tiktok.com/@user7345086630888',  icon: '🎵' },
+  { name: 'TikTok',    href: 'https://tiktok.com/@cosmocats_',  icon: '🎵' },
   { name: 'X (Twitter)', href: 'https://x.com/SkubaVital777',      icon: '🕊️' },
 ];
 
